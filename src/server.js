@@ -4,7 +4,7 @@ const routes = require('./routes');
 
 const init = async () => {
     const server = Hapi.server({
-        port: process.env.PORT || 5000,
+        port: process.env.PORT,
         // eslint-disable-next-line no-negated-condition
         host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
         routes: {
